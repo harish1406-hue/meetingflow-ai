@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
-import type { FormEvent, ReactNode } from "react";
+import type { ChangeEvent, FormEvent, ReactNode } from "react";
 import AppSidebar from "@/components/AppSidebar";
 
 type MeetingTask = {
@@ -37,24 +37,6 @@ type MeetingOutput = {
   risks: string[];
   blockers: string[];
 };
-
-const exampleTranscript = `
-John: Thanks everyone. We need to finish the new landing page before the client presentation next Friday.
-
-Sarah: The design is finished, but development still needs approximately three days.
-
-John: Sarah, please send the final design files to Michael today.
-
-Sarah: Yes, I will send them before 5 PM.
-
-Michael: I will complete the development once I receive the files. I should be able to finish it by Thursday.
-
-John: Good. We have decided to use the second homepage design.
-
-Michael: The payment integration is still blocked because the client has not provided the Stripe credentials.
-
-John: I will contact the client about the credentials this afternoon.
-`.trim();
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -179,11 +161,57 @@ export default function Home() {
   );
   const [meetingDate, setMeetingDate] = useState("");
   const [meetingType, setMeetingType] = useState("online");
-  const [transcript, setTranscript] = useState(exampleTranscript);
+  const [transcript, setTranscript] = useState("");
 
   const [result, setResult] = useState<MeetingOutput | null>(null);
   const [error, setError] = useState("");
   const [processing, setProcessing] = useState(false);
+
+  async function handleTranscriptFile(
+    event: ChangeEvent<HTMLInputElement>,
+  ) {
+    const file = event.target.files?.[0];
+
+    if (!file) {
+      return;
+    }
+
+    if (!file.name.toLowerCase().endsWith(".txt")) {
+      setError("Please select a .txt transcript file.");
+      event.target.value = "";
+      return;
+    }
+
+    try {
+      const text = await file.text();
+
+      if (!text.trim()) {
+        throw new Error(
+          "The selected transcript file is empty.",
+        );
+      }
+
+      setTranscript(text);
+      setError("");
+
+      if (
+        !title.trim() ||
+        title === "Landing Page Project Meeting"
+      ) {
+        setTitle(
+          file.name
+            .replace(/\.txt$/i, "")
+            .replace(/[-_]+/g, " "),
+        );
+      }
+    } catch (caughtError) {
+      setError(
+        caughtError instanceof Error
+          ? caughtError.message
+          : "Could not read the transcript file.",
+      );
+    }
+  }
 
   async function processMeeting(
     event: FormEvent<HTMLFormElement>,
@@ -271,7 +299,7 @@ export default function Home() {
               </h1>
 
               <p className="mt-2 text-slate-600">
-                Paste a transcript and generate summaries,
+                Paste a transcript or upload a .txt file to generate summaries,
                 decisions, tasks, risks and a follow-up email.
               </p>
             </header>
@@ -330,6 +358,26 @@ export default function Home() {
                       In-person meeting
                     </option>
                   </select>
+                </label>
+              </div>
+
+              <div className="mt-5 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-4">
+                <label className="block space-y-2">
+                  <span className="text-sm font-medium">
+                    Upload transcript file
+                  </span>
+
+                  <input
+                    type="file"
+                    accept=".txt,text/plain"
+                    onChange={handleTranscriptFile}
+                    className="block w-full text-sm text-slate-600 file:mr-4 file:rounded-lg file:border-0 file:bg-blue-600 file:px-4 file:py-2 file:font-semibold file:text-white hover:file:bg-blue-700"
+                  />
+
+                  <p className="text-xs text-slate-500">
+                    Choose a UTF-8 .txt file. Its contents will
+                    appear below and can still be edited.
+                  </p>
                 </label>
               </div>
 
