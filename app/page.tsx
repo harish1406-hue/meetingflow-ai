@@ -1,8 +1,8 @@
 ﻿"use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import type { FormEvent, ReactNode } from "react";
+import AppSidebar from "@/components/AppSidebar";
 
 type MeetingTask = {
   title: string;
@@ -257,28 +257,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-100 text-slate-950">
       <div className="flex min-h-screen">
-        <aside className="hidden w-64 shrink-0 bg-slate-950 p-6 text-white md:block">
-          <div className="mb-10">
-            <p className="text-xl font-bold">MeetingFlow AI</p>
-            <p className="mt-1 text-sm text-slate-400">
-              Meeting-to-Tasks Agent
-            </p>
-          </div>
-
-          <nav className="space-y-2 text-sm">
-            <div className="rounded-lg bg-blue-600 px-4 py-3 font-medium">
-              New Meeting
-            </div>
-
-            <Link href="/meetings" className="block rounded-lg px-4 py-3 text-slate-400 transition hover:bg-slate-900 hover:text-white">Meeting History</Link>
-
-            <Link href="/tasks" className="block rounded-lg px-4 py-3 text-slate-400 transition hover:bg-slate-900 hover:text-white">All Tasks</Link>
-
-            <div className="rounded-lg px-4 py-3 text-slate-400">
-              People / Voice Profiles
-            </div>
-          </nav>
-        </aside>
+        <AppSidebar />
 
         <main className="min-w-0 flex-1 p-5 md:p-10">
           <div className="mx-auto max-w-5xl">
@@ -616,4 +595,5 @@ function ListSection({
 function EmptyMessage({ text }: { text: string }) {
   return <p className="text-sm text-slate-500">{text}</p>;
 }
+
 

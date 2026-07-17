@@ -102,3 +102,7 @@ npm run build
 - Add meeting deletion and retention controls.
 - Add automated tests and monitoring.
 - Add calendar and meeting-platform integrations.
+## Demo walkthrough
+
+- Part 1: https://www.loom.com/share/387b61b2e91f45a993e3daa2f3a2148d
+- Part 2: https://www.loom.com/share/0634c87c0f2a434d8d6a9f55d2955f5e
