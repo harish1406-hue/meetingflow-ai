@@ -47,7 +47,15 @@ Create the environment file:
 Copy-Item .env.example .env.local
 ```
 
-Add your own credentials to `.env.local`, then start the application:
+Add your own credentials to `.env.local`.
+
+Initialize the Supabase database tables:
+
+```powershell
+npm run db:setup
+```
+
+Then start the application:
 
 ```powershell
 npm run dev
