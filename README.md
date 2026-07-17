@@ -1,67 +1,81 @@
 # MeetingFlow AI
 
-MeetingFlow AI converts meeting transcripts and recordings into reviewed and confirmed actions.
+MeetingFlow AI is an upload-based meeting assistant that converts transcripts, audio recordings, and video recordings into structured business actions.
 
 ## Features
 
-- Transcript processing
+- Transcript input and transcript file upload
+- Audio and video file upload
 - Audio/video transcription
 - Speaker diarization
-- Manual speaker mapping
-- Local MFCC recurring-speaker suggestions
-- Summaries, decisions and tasks
-- Owners, explicit deadlines and relative deadlines
-- Conditional tasks
-- Risks, blockers and open questions
-- Human review and confirmation
-- Follow-up email generation and sending
-- Meeting history and task list
+- Manual speaker-to-person mapping
+- Confirmed voice-profile storage
+- Recurring-speaker suggestions
+- Short and detailed meeting summaries
+- Decisions and action items
+- Owners, deadlines, risks, blockers, and open questions
+- Editable review workflow
+- Approval-required email sending
+- Email-send history
+- Meeting history
+- Cross-meeting task dashboard
 - People and voice-profile management
 - Voice-profile deletion
-- Three seeded demo meetings
-- One eight-speaker demo
 
-## Stack
+## Technology
 
 - Next.js
+- TypeScript
 - OpenAI
 - AssemblyAI
-- Supabase
+- Supabase PostgreSQL
 - Resend
 - FFmpeg
-- Meyda MFCC features
-
-The voice similarity feature is a lightweight prototype, not biometric authentication.
+- Meyda MFCC acoustic features
 
 ## Local setup
 
+Install dependencies:
+
 ```powershell
 npm install
+```
+
+Create the environment file:
+
+```powershell
+Copy-Item .env.example .env.local
+```
+
+Add your own credentials to `.env.local`, then start the application:
+
+```powershell
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open:
 
-## Required runtime environment variables
-
-```env
-OPENAI_API_KEY=
-OPENAI_MODEL=gpt-4o-mini
-SUPABASE_URL=
-SUPABASE_SERVICE_ROLE_KEY=
-ASSEMBLYAI_API_KEY=
-RESEND_API_KEY=
-RESEND_FROM=MeetingFlow <onboarding@resend.dev>
+```text
+http://localhost:3000
 ```
 
 Never commit `.env.local`.
 
-## Demo data
+## Sample meetings
 
-```powershell
-node scripts/seed-demo-data.mjs
-node scripts/verify-final.mjs
-```
+The `sample-meetings` folder contains staged input transcripts for testing the application.
+
+Sample meetings must be processed through the frontend. The repository does not insert pre-generated meeting records directly into Supabase.
+
+## Voice-profile prototype
+
+The application creates derived numerical acoustic profiles from confirmed speaker audio.
+
+Future recordings are compared with saved profiles to suggest likely recurring speakers. Suggestions require manual confirmation and are not intended for biometric authentication.
+
+## Video support
+
+Video files are supported through their audio track. Video frames, faces, slides, screen content, and gestures are not analysed.
 
 ## Quality checks
 
@@ -70,13 +84,21 @@ npm run lint
 npm run build
 ```
 
-## Health check
+## Current limitations
 
-Open `/api/health`.
+- Speaker recognition is a lightweight prototype.
+- Accuracy depends on recording quality and sufficient clean speech.
+- Overlapping speech can reduce diarization quality.
+- Audio/video processing is upload-based rather than real-time.
+- Automatic meeting-bot joining is not included.
+- Enterprise authentication and permissions are outside the MVP.
+- Production use would require additional security and privacy review.
 
-## Demo limitations
+## Recommended next steps
 
-- Speaker suggestions require manual confirmation.
-- Similarity scores are not identity probabilities.
-- Accuracy depends on clean speech and recording conditions.
-- Authentication and enterprise permissions are outside this MVP.
+- Replace MFCC-only matching with a production speaker-embedding model.
+- Add authentication and organization-level permissions.
+- Add background jobs for long audio and video files.
+- Add meeting deletion and retention controls.
+- Add automated tests and monitoring.
+- Add calendar and meeting-platform integrations.

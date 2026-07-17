@@ -1,0 +1,20 @@
+SYNTHETIC TEST DATA
+
+Meeting title: NovaCare Pilot Follow-Up
+Meeting type: Short recurring-speaker test
+Recurring speakers:
+- Emma Reed
+- Daniel Brooks
+- Sofia Alvarez
+
+[00:00:00] Sofia: The client delivered the anonymized examples, and the category quality is better than expected. I have added the final examples to the acceptance checklist.
+
+[00:00:18] Daniel: The classifier is connected to the test helpdesk. I will tune the low-confidence threshold tomorrow after the first batch is reviewed.
+
+[00:00:37] Emma: Decision confirmed: low-confidence tickets will go to a separate human-review queue during the pilot.
+
+[00:00:50] Sofia: I will schedule the client review for next Wednesday.
+
+[00:01:02] Daniel: I will prepare the test report before that meeting.
+
+[00:01:14] Emma: The only open question is whether the client wants daily or weekly performance summaries.

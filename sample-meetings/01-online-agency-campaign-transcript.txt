@@ -1,0 +1,33 @@
+SYNTHETIC TEST DATA
+
+Meeting title: BrightWave Agency - Autumn Campaign Planning
+Meeting type: Online meeting
+Participants:
+- Ava Morgan - Account Director
+- Ben Carter - Paid Media Specialist
+- Chloe Martin - Creative Lead
+- David Lee - Analytics Manager
+
+[00:00:00] Ava: The goal today is to confirm the direction for the autumn campaign and leave with clear owners. The client wants the first ads live on September 8, but the landing page and creative approval are still open.
+
+[00:00:20] Chloe: The visual concept is ready. I recommend the cleaner product-led version rather than the lifestyle version because it gives us more room for the offer and the customer proof.
+
+[00:00:39] Ben: I agree. For paid media, I can prepare two audience groups: returning website visitors and a broader interest-based group. I need the final images before I can build the ads.
+
+[00:00:58] David: The current tracking plan covers purchases and form submissions. We still need a separate event for brochure downloads, otherwise the campaign report will miss an important lead action.
+
+[00:01:18] Ava: Decision confirmed: we will use the product-led creative direction for the first campaign release.
+
+[00:01:29] Chloe: I will deliver the final image set and mobile variations by next Tuesday.
+
+[00:01:41] Ben: I will build the two audience groups and draft the paid campaign by Thursday afternoon, provided the images arrive on time.
+
+[00:01:56] David: I will add the brochure-download event and test it by Friday, September 4.
+
+[00:02:10] Ava: I will send the revised media budget to the client tomorrow morning and request final approval by the end of the week.
+
+[00:02:25] Ben: There is a minor risk that the broader audience will be too expensive during the first week. I suggest a daily budget cap until we have conversion data.
+
+[00:02:39] Chloe: One question remains: does the client want the existing customer testimonial in the ads, or only on the landing page?
+
+[00:02:51] Ava: I will clarify that in tomorrow's client email. The launch date remains September 8 unless creative approval is delayed.

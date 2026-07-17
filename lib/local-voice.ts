@@ -79,8 +79,16 @@ async function extractPcm(
     "pipe:1",
   ];
 
+  const executable = ffmpegPath;
+
+  if (!executable) {
+    throw new Error(
+      "FFmpeg executable was not found.",
+    );
+  }
+
   return new Promise((resolve, reject) => {
-    const child = spawn(ffmpegPath, args, {
+    const child = spawn(executable, args, {
       windowsHide: true,
       stdio: ["ignore", "pipe", "pipe"],
     });

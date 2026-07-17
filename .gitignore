@@ -43,3 +43,11 @@ next-env.d.ts
 .next/
 node_modules/
 .meetingflow-backup/
+.env.local
+.env
+.next/
+node_modules/
+!.env.example
+.env.local
+.env
+!.env.example

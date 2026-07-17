@@ -1,0 +1,49 @@
+SYNTHETIC TEST DATA
+
+Meeting title: Atlas Enterprise Rollout - In-Person Readiness Review
+Meeting type: In-person room meeting
+Participants:
+- Emma Reed - Project Manager
+- Daniel Brooks - Developer
+- Sofia Alvarez - Marketing Manager
+- Liam Turner - Support Lead
+- Maya Chen - Security Lead
+- Noah Williams - Finance Manager
+- Chloe Martin - Customer Success Manager
+- Ethan Cole - Legal Counsel
+
+[00:00:00] Emma: The goal is to make the final readiness decision for the Atlas enterprise rollout. We are still targeting September 2, but every function needs to confirm what remains.
+
+[00:00:20] Daniel: The integration is stable. I still need to run the full overnight import test by Thursday and verify that failed records can be retried without duplicates.
+
+[00:00:42] Sofia: The customer announcement and launch guide are drafted. I will send both for final review by Wednesday afternoon.
+
+[00:01:01] Liam: Support coverage is arranged. I will publish the escalation guide before administrator training and test the escalation hotline before rollout day.
+
+[00:01:24] Maya: The security review is complete except for the vendor-access exception. I need the signed exception by Friday. Until it is signed, external vendor access remains a risk.
+
+[00:01:47] Noah: Finance approved the rollout budget. I will update the forecast after the customer confirms the final seat count and post it in the finance channel.
+
+[00:02:08] Chloe: Customer success will host administrator training next Tuesday. I will collect attendance confirmations beforehand and send reminders two business days before the session.
+
+[00:02:31] Ethan: The standard terms are approved. The data-processing addendum still needs the customer's signature, so that is the current blocker.
+
+[00:02:52] Emma: Understood. The external announcement cannot go out while the addendum is unsigned.
+
+[00:03:02] Daniel: If the overnight import test fails, I will prepare a manual staged-import plan and estimate how much time it would add.
+
+[00:03:22] Sofia: One question remains: do we prepare the announcement for September 2 and hold it, or move the public date now?
+
+[00:03:41] Ethan: Prepare it and hold it. We should not announce until the signed addendum is received.
+
+[00:03:57] Emma: Decision confirmed: the rollout remains scheduled for September 2, but the external announcement waits for the signed data-processing addendum.
+
+[00:04:18] Maya: I will verify the signed vendor-access exception as soon as it arrives and document the approved access window.
+
+[00:04:35] Noah: I will update the forecast within one business day after the final seat count is confirmed.
+
+[00:04:50] Chloe: I will also send the training recording and onboarding checklist within twenty-four hours after the session.
+
+[00:05:08] Liam: I will assign one support owner for the first three rollout days and publish the contact schedule by Friday.
+
+[00:05:27] Emma: The final readiness review closes Friday at 4 PM. Any unresolved blocker at that point must be escalated immediately.

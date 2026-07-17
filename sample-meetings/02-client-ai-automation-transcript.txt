@@ -1,0 +1,36 @@
+SYNTHETIC TEST DATA
+
+Meeting title: NovaCare - Client AI Automation Project
+Meeting type: Online audio meeting
+Participants:
+- Emma Reed - Project Manager
+- Daniel Brooks - Automation Developer
+- Sofia Alvarez - Client Success Manager
+- Marcus Hill - Operations Lead
+- Priya Shah - Data Protection Advisor
+
+[00:00:00] Emma: We need to confirm the scope of the support-ticket automation pilot and identify anything that could block the test next month.
+
+[00:00:17] Marcus: Operations wants the first version to classify incoming tickets, suggest a reply, and send urgent cases to a human queue. It must not send replies automatically during the pilot.
+
+[00:00:37] Daniel: That is achievable. I will finish the classification workflow by August 12 and connect it to the test helpdesk by August 14.
+
+[00:00:54] Sofia: I will collect twenty anonymized ticket examples from the client by the end of tomorrow. I will also prepare the user-acceptance checklist before the pilot review.
+
+[00:01:13] Priya: The examples must be anonymized before they enter the test system. The current blocker is that we do not yet have written confirmation of the client's retention period.
+
+[00:01:31] Emma: Decision confirmed: the pilot will classify tickets and draft replies, but every outgoing reply will require human approval.
+
+[00:01:45] Marcus: I will nominate two support agents for testing by Friday and reserve thirty minutes each day for reviewing the AI suggestions.
+
+[00:02:02] Daniel: If the client cannot provide anonymized examples by tomorrow, I will generate a synthetic dataset so development does not stop.
+
+[00:02:19] Priya: I will send the data-handling checklist today and review the client's retention answer as soon as it arrives.
+
+[00:02:35] Sofia: The main risk is that the client's historical tickets use inconsistent categories, which may reduce classification accuracy during the first test.
+
+[00:02:52] Emma: One question remains: should low-confidence tickets go directly to the general queue, or should they be labelled for a separate review queue?
+
+[00:03:08] Marcus: I prefer a separate review queue, but I want to confirm the expected daily volume first.
+
+[00:03:21] Emma: Good. The pilot readiness review will be Monday, August 17 at 2 PM.
