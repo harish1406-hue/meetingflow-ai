@@ -479,7 +479,7 @@ export default function Home() {
                             <p className="mt-2 text-sm text-slate-500">
                               Topic: {decision.topic}
                               {decision.timestamp
-                                ? ` Â· ${decision.timestamp}`
+                                ? ` · ${decision.timestamp}`
                                 : ""}
                             </p>
                           </article>
@@ -643,5 +643,6 @@ function ListSection({
 function EmptyMessage({ text }: { text: string }) {
   return <p className="text-sm text-slate-500">{text}</p>;
 }
+
 
 

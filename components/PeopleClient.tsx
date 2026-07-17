@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -214,7 +214,7 @@ export default function PeopleClient({
                     {person.name}
                   </h2>
                   <p className="mt-1 text-sm text-slate-500">
-                    {person.email || "No email"} Â·{" "}
+                    {person.email || "No email"} Ã‚·{" "}
                     {person.role || "No role"}
                   </p>
                 </div>
